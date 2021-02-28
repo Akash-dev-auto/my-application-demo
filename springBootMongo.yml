@@ -8,6 +8,7 @@ data:
   username: springapp
   password: mongodb@123
 ---
+
 # Replication Controller for springapp
 apiVersion: v1
 kind: ReplicationController
@@ -23,7 +24,7 @@ spec:
         app: springboot
     spec:
       containers:
-      - image: dockerhandson/spring-boot-mongo
+      - image: ananddevlearner11/spring-boot-mongo
         name: springboot
         ports:
         - containerPort: 8080  
