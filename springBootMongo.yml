@@ -1,13 +1,10 @@
 ---
 # Replication Controller for springapp
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
   name: spring-controller
 spec:
-  replicas: 1
-  selector:
-    app: springboot
   template:
     metadata:
       labels:
