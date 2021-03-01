@@ -1,11 +1,24 @@
 ---
-# Replication Controller for springapp
-apiVersion: v1
-kind: Pod
+# deployment for springapp        
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: spring-controller
+  name: spring-deployment
+  labels:
+    app: spring
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 
+  template:
+    metadata:
+      labels:
+        app: spring
+    spec:
       containers:
-      - image: ananddevlearner11/spring-boot-mongo
-        name: springboot
+      - name: spring
+        image: ananddevlearner11/spring-boot-mongo
+        ports:
+        - containerPort: 80
    
