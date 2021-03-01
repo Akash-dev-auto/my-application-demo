@@ -5,13 +5,7 @@ kind: Pod
 metadata:
   name: spring-controller
 spec:
-  template:
-    metadata:
-      labels:
-        app: springboot
-    spec:
       containers:
       - image: ananddevlearner11/spring-boot-mongo
         name: springboot
-        ports:
-        - containerPort: 8080   
+   
